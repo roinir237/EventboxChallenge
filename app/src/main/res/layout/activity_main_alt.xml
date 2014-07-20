@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#232323"
+    tools:context="com.example.eventboxchallenge.app.MainActivity">
+    <ImageView
+        android:id="@+id/largeArtwork"
+        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_above="@+id/seekContainer"
+        android:src="@drawable/artwork_placeholder"
+        android:paddingBottom="20dp"
+        android:paddingLeft="23dp"
+        android:paddingRight="23dp"
+        android:paddingTop="0dp"
+        android:background="@drawable/artwork_shadow"
+        android:clickable="true"/>
+
+    <ImageView
+        android:id="@+id/previewArtwork"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_above="@+id/seekContainer"
+        android:src="@drawable/artwork_placeholder"
+        android:paddingBottom="20dp"
+        android:paddingLeft="23dp"
+        android:paddingRight="23dp"
+        android:paddingTop="0dp"
+        android:background="@drawable/artwork_shadow"
+        android:clickable="true"
+        android:visibility="gone"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/artistName"
+        android:text="Artist's Name"
+        android:textSize="34sp"
+        android:textColor="#EFEFEF"
+        android:layout_marginBottom="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/trackTitle"
+        android:text="Track title"
+        android:textSize="24sp"
+        android:textColor="#EFEFEF"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_below="@id/artistName"/>
+
+    <LinearLayout
+        android:id="@+id/seekContainer"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginBottom="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/mediaSeekBar"
+                android:layout_weight="1"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="5dp">
+                <TextView
+                    android:id="@+id/trackPosition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#EFEFEF"
+                    android:text="00:00"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:id="@+id/trackDuration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#EFEFEF"
+                    android:text="/00:00"
+                    android:textSize="18sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+</RelativeLayout>
